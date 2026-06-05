@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Uang Bagas</title>
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <meta name="theme-color" content="#4CAF50">
+</head>
+<body>
+
+<div class="app">
+
+  <h2>💰 Pengeluaran</h2>
+  <h4>Jangan boros, dolar mahal wkwk</h4>
+
+  <div class="card input-card">
+    <input type="date" id="tanggal">
+    <input type="text" id="keterangan" placeholder="Keterangan">
+    <input type="number" id="jumlah" placeholder="Jumlah (Rp)">
+    <button onclick="tambahData()">+ Tambah</button>
+  </div>
+
+  <div class="card summary">
+    <p>Total Pengeluaran</p>
+    <h1>Rp <span id="total">0</span></h1>
+  </div>
+
+  <div class="card">
+    <table>
+      <thead>
+        <tr>
+          <th>Tanggal</th>
+          <th>Keterangan</th>
+          <th>Jumlah</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="tabel"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js");
+}
+</script>
+
+</body>
+</html>
