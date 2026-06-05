@@ -1,29 +1,50 @@
 body {
+  margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #f1f5f9;
+  background: #f0f4f8;
+}
+
+/* HEADER */
+.header {
+  background: linear-gradient(135deg, #108EE9, #0A6ED1);
+  color: white;
+  padding: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.header h2 {
   margin: 0;
 }
 
-.app {
-  max-width: 500px;
-  margin: auto;
-  padding: 20px;
+.header p {
+  margin: 5px 0 0;
+  opacity: 0.8;
 }
 
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.card {
+/* SALDO */
+.saldo-card {
   background: white;
+  margin: -30px 20px 20px;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.saldo-card h1 {
+  color: #108EE9;
+}
+
+/* FORM */
+.form-card {
+  background: white;
+  margin: 20px;
   padding: 15px;
   border-radius: 15px;
-  margin-bottom: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-.input-card input {
+.form-card input {
   width: 100%;
   padding: 10px;
   margin: 5px 0;
@@ -31,44 +52,41 @@ h2 {
   border: 1px solid #ddd;
 }
 
-button {
+.form-card button {
   width: 100%;
   padding: 12px;
-  background: #4CAF50;
+  background: #108EE9;
   border: none;
   color: white;
   border-radius: 10px;
   font-size: 16px;
 }
 
-button:hover {
-  background: #45a049;
+/* LIST */
+.list-card {
+  margin: 20px;
 }
 
-.summary {
-  text-align: center;
+.item {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.summary h1 {
-  color: #4CAF50;
+.item-left {
+  display: flex;
+  flex-direction: column;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
+.item-left small {
+  color: gray;
 }
 
-td, th {
-  padding: 10px;
-  text-align: center;
-}
-
-tr {
-  border-bottom: 1px solid #eee;
-}
-
-td button {
-  background: red;
-  padding: 5px 10px;
-  border-radius: 5px;
+.item-right {
+  color: red;
+  font-weight: bold;
 }
