@@ -13,27 +13,32 @@ function simpan() {
 
 // Render / tampilkan data ke tabel
 function render() {
-  let tabel = document.getElementById("tabel");
-  tabel.innerHTML = "";
+  let list = document.getElementById("list");
+  list.innerHTML = "";
 
   let total = 0;
 
   data.forEach((item, index) => {
-    let row = tabel.insertRow();
+    let div = document.createElement("div");
+    div.className = "item";
 
-    row.innerHTML = `
-      <td>${item.tanggal}</td>
-      <td>${item.keterangan}</td>
-      <td>Rp ${formatRupiah(item.jumlah)}</td>
-      <td><button onclick="hapus(${index})">❌</button></td>
+    div.innerHTML = `
+      <div class="item-left">
+        <strong>${item.keterangan}</strong>
+        <small>${item.tanggal}</small>
+      </div>
+      <div class="item-right">
+        - Rp ${formatRupiah(item.jumlah)}
+      </div>
+      <button onclick="hapus(${index})">❌</button>
     `;
 
+    list.appendChild(div);
     total += item.jumlah;
   });
 
   document.getElementById("total").innerText = formatRupiah(total);
 }
-
 // Tambah data baru
 function tambahData() {
   let tanggal = document.getElementById("tanggal").value;
