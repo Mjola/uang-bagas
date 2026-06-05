@@ -25,8 +25,8 @@ body {
 /* SALDO */
 .saldo-card {
   background: white;
-  margin: -10px 20px 20px;
-  padding: 20px;
+  margin: -30px 20px 20px;
+  padding: 40px;
   border-radius: 15px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
